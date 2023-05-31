@@ -1,10 +1,6 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-
 public class Main {
     public static void main(String[] args) {
-        MyGraph myGraph = new MyGraph();
+        MyGraph<Integer> myGraph = new MyGraph<>();
         Vertex<Integer> s1 = new Vertex<>(1);
         Vertex<Integer> s2 = new Vertex<>(2);
         Vertex<Integer> s3 = new Vertex<>(3);
@@ -15,6 +11,6 @@ public class Main {
         myGraph.addEdge(s2, s4, 7d);
         myGraph.addEdge(s2, s5, 8d);
         myGraph.dijkstra(s1);
-
+        myGraph.BFS(s2);
     }
 }
